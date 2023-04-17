@@ -12,7 +12,7 @@ function App() {
   const [team, setTeam] = useState(initialTeam);
 
   function handleTaskSubmit(yeniTask) {
-    const newTask = { ...yeniTask, id: nanoid(5) };
+    const newTask = { ...yeniTask, id: nanoid(5) }; // birden fazla görev eklendiğinde aynı ID almaması için nanoID kullanarak 5 haneli yeni ID ürettik.
     setTasks([newTask, ...tasks]);
     toast.success("Yeni görev oluşturuldu.");
   }
