@@ -59,7 +59,6 @@ export default function TaskHookForm({ kisiler, submitFn }) {
         <input
           className="input-text"
           id="title"
-          name="title"
           type="text"
           {...register("title", { validate: validateTitle })}
         />
@@ -74,7 +73,6 @@ export default function TaskHookForm({ kisiler, submitFn }) {
           className="input-textarea"
           rows="3"
           id="description"
-          name="description"
           {...register("description", { validate: validateDescription })}
         ></textarea>
         <p className="input-error">{errors.description?.message}</p>
@@ -87,7 +85,6 @@ export default function TaskHookForm({ kisiler, submitFn }) {
             <label className="input-checkbox" key={p}>
               <input
                 type="checkbox"
-                name="people"
                 value={p}
                 {...register("people", { validate: validatePeople })}
               />
